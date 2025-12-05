@@ -1,0 +1,90 @@
+<!--pages/privacy/privacy.wxml-->
+<!--隐私政策页面-->
+
+<view class="container">
+  <view class="content">
+    <view class="title">
+      <text class="title-icon">🔒</text>
+      <text>隐私政策</text>
+    </view>
+    
+    <view class="subtitle">Ticker-车票儿 用户隐私保护指引</view>
+    
+    <view class="privacy-content">
+      <view class="section">
+        <view class="section-title">1. 信息收集</view>
+        <view class="section-content">
+          <text>我们仅收集为您提供服务所必需的信息：</text>
+          <text>• 用户基本信息（昵称、头像）- 用于个性化服务</text>
+          <text>• 车票制作数据 - 用于生成车票和保存历史记录</text>
+          <text>• 设备信息 - 用于优化应用性能</text>
+        </view>
+      </view>
+      
+      <view class="section">
+        <view class="section-title">2. 信息使用</view>
+        <view class="section-content">
+          <text>我们使用收集的信息用于：</text>
+          <text>• 提供车票生成服务</text>
+          <text>• 保存您的制作历史和草稿</text>
+          <text>• 优化应用功能和用户体验</text>
+          <text>• 提供个性化服务</text>
+        </view>
+      </view>
+      
+      <view class="section">
+        <view class="section-title">3. 信息存储</view>
+        <view class="section-content">
+          <text>• 您的数据主要存储在本地设备上</text>
+          <text>• 车票生成时临时传输到服务器处理</text>
+          <text>• 不会永久存储您的个人信息</text>
+        </view>
+      </view>
+      
+      <view class="section">
+        <view class="section-title">4. 信息保护</view>
+        <view class="section-content">
+          <text>• 采用加密技术保护数据传输</text>
+          <text>• 严格限制数据访问权限</text>
+          <text>• 定期进行安全审计</text>
+        </view>
+      </view>
+      
+      <view class="section">
+        <view class="section-title">5. 权限说明</view>
+        <view class="section-content">
+          <text>• 相册权限 - 用于保存生成的车票图片</text>
+          <text>• 用户信息权限 - 用于个性化服务</text>
+          <text>• 存储权限 - 用于保存草稿和历史记录</text>
+        </view>
+      </view>
+      
+      <view class="section">
+        <view class="section-title">6. 您的权利</view>
+        <view class="section-content">
+          <text>• 随时查看、修改或删除您的个人信息</text>
+          <text>• 拒绝提供非必要信息</text>
+          <text>• 联系我们处理隐私相关问题</text>
+        </view>
+      </view>
+      
+      <view class="section">
+        <view class="section-title">7. 联系我们</view>
+        <view class="section-content">
+          <text>如有隐私相关问题，请联系：</text>
+          <text>邮箱：privacy@ticker.com</text>
+          <text>更新时间：2024年1月1日</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="footer">
+    <button class="btn btn-primary" bindtap="agreePrivacy">
+      <text>我已阅读并同意</text>
+    </button>
+    <button class="btn btn-secondary" bindtap="disagreePrivacy">
+      <text>不同意</text>
+    </button>
+  </view>
+</view>

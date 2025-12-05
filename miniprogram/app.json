@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/make/make",
+    "pages/history/history",
+    "pages/profile/profile",
+    "pages/preview/preview",
+    "pages/privacy/privacy"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4f46e5",
+    "navigationBarTitleText": "Ticker-车票儿",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fafbfc"
+  },
+  "tabBar": {
+    "color": "#6b7280",
+    "selectedColor": "#4f46e5",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/make/make",
+        "text": "制作"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史结果"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "用户中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "permission": {
+    "scope.userInfo": {
+      "desc": "用于完善用户资料和个性化服务"
+    },
+    "scope.writePhotosAlbum": {
+      "desc": "用于保存生成的车票图片到相册"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

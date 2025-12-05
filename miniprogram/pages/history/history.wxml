@@ -1,0 +1,234 @@
+<!--pages/history/history.wxml-->
+<!--历史结果页面 - 查看历史生成的车票-->
+
+<view class="container">
+  <!-- 统计信息 -->
+  <view class="stats-section">
+    <view class="stats-card">
+      <view class="stats-number">{{totalCount}}</view>
+      <view class="stats-label">历史生成总数</view>
+    </view>
+  </view>
+
+  <!-- 筛选和排序控制 -->
+  <view class="content" wx:if="{{history.length > 0}}">
+    <view class="filter-header">
+      <view class="title">
+        <text class="title-icon">🔍</text>
+        <text>筛选和排序</text>
+      </view>
+      <view class="filter-actions">
+        <button class="btn btn-sm btn-ghost" bindtap="toggleFilters">
+          <text>{{showFilters ? '收起' : '展开'}}</text>
+        </button>
+        <button class="btn btn-sm btn-ghost" bindtap="clearFilters">
+          <text>清除</text>
+        </button>
+      </view>
+    </view>
+
+    <!-- 展开的筛选面板 -->
+    <view class="filter-panel" wx:if="{{showFilters}}">
+      <!-- 样式筛选 -->
+      <view class="filter-section">
+        <text class="filter-label">车票样式：</text>
+        <scroll-view class="filter-scroll" scroll-x="true">
+          <view class="filter-list">
+            <view
+              class="filter-item {{filterStyle === 'all' ? 'active' : ''}}"
+              data-style="all"
+              bindtap="onStyleFilter"
+            >
+              <text>全部</text>
+            </view>
+            <view
+              wx:for="{{styles}}"
+              wx:key="*this"
+              class="filter-item {{filterStyle === item ? 'active' : ''}}"
+              data-style="{{item}}"
+              bindtap="onStyleFilter"
+            >
+              <text>{{item}}</text>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+
+      <!-- 出发站筛选 -->
+      <view class="filter-section">
+        <text class="filter-label">出发站：</text>
+        <input
+          class="filter-input"
+          placeholder="输入出发站"
+          value="{{filterDeparture}}"
+          bindinput="onDepartureFilter"
+        />
+      </view>
+
+      <!-- 到达站筛选 -->
+      <view class="filter-section">
+        <text class="filter-label">到达站：</text>
+        <input
+          class="filter-input"
+          placeholder="输入到达站"
+          value="{{filterArrival}}"
+          bindinput="onArrivalFilter"
+        />
+      </view>
+
+      <!-- 排序选项 -->
+      <view class="filter-section">
+        <text class="filter-label">排序方式：</text>
+        <view class="sort-options">
+          <view
+            class="sort-option {{sortBy === 'time_desc' ? 'active' : ''}}"
+            data-sort="time_desc"
+            bindtap="onSortChange"
+          >
+            <text>最新优先</text>
+          </view>
+          <view
+            class="sort-option {{sortBy === 'time_asc' ? 'active' : ''}}"
+            data-sort="time_asc"
+            bindtap="onSortChange"
+          >
+            <text>最早优先</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 历史记录列表 -->
+  <view wx:if="{{filteredHistory.length > 0}}">
+    <view class="content">
+      <view class="title">
+        <text class="title-icon">📋</text>
+        <text>历史记录 ({{filteredHistory.length}}/{{totalCount}})</text>
+      </view>
+    </view>
+
+    <view
+      wx:for="{{filteredHistory}}"
+      wx:key="id"
+      class="history-item"
+    >
+      <view class="item-preview" bindtap="viewDetail" data-index="{{index}}">
+        <image
+          class="preview-thumb"
+          src="data:image/png;base64,{{item.preview}}"
+          mode="aspectFill"
+        />
+      </view>
+
+      <view class="item-details">
+        <!-- 基本信息 -->
+        <view class="item-header">
+          <view class="item-route">
+            <text class="route-text">{{item.departureStation || '未填写'}}</text>
+            <text class="route-arrow">→</text>
+            <text class="route-text">{{item.arrivalStation || '未填写'}}</text>
+          </view>
+          <view class="item-meta">
+            <text class="item-style">{{item.style}}</text>
+            <text class="item-time">{{formatDate(item.timestamp)}}</text>
+          </view>
+        </view>
+
+        <!-- 详细信息 -->
+        <view class="item-info-row" wx:if="{{item.trainNumber || item.seatInfo || item.date}}">
+          <view class="info-items">
+            <view class="info-item" wx:if="{{item.trainNumber}}">
+              <text class="info-label">车次：</text>
+              <text class="info-value">{{item.trainNumber}}</text>
+            </view>
+            <view class="info-item" wx:if="{{item.seatInfo}}">
+              <text class="info-label">座位：</text>
+              <text class="info-value">{{item.seatInfo}}</text>
+            </view>
+            <view class="info-item" wx:if="{{item.date}}">
+              <text class="info-label">日期：</text>
+              <text class="info-value">{{item.date}}</text>
+            </view>
+          </view>
+        </view>
+
+        <!-- 操作按钮 -->
+        <view class="item-actions">
+          <button
+            class="btn btn-sm btn-primary"
+            bindtap="viewDetail"
+            data-index="{{index}}"
+          >
+            <text>👁️ 查看</text>
+          </button>
+
+          <button
+            class="btn btn-sm btn-secondary"
+            bindtap="remake"
+            data-index="{{index}}"
+          >
+            <text>🔄 重做</text>
+          </button>
+
+          <button
+            class="btn btn-sm btn-ghost"
+            bindtap="deleteItem"
+            data-index="{{index}}"
+          >
+            <text>🗑️ 删除</text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 筛选结果为空 -->
+  <view wx:if="{{history.length > 0 && filteredHistory.length === 0}}" class="empty-state">
+    <view class="empty-content">
+      <text class="empty-icon">🔍</text>
+      <text class="empty-title">未找到匹配记录</text>
+      <text class="empty-desc">请调整筛选条件或清除筛选</text>
+      <button
+        class="btn btn-primary"
+        bindtap="clearFilters"
+      >
+        <text>清除筛选</text>
+      </button>
+    </view>
+  </view>
+
+  <!-- 完全没有历史记录 -->
+  <view wx:if="{{history.length === 0}}" class="empty-state">
+    <view class="empty-content">
+      <text class="empty-icon">📚</text>
+      <text class="empty-title">暂无历史记录</text>
+      <text class="empty-desc">开始制作您的第一张车票吧！</text>
+      <button
+        class="btn btn-primary"
+        bindtap="startMaking"
+      >
+        <text>🎫 开始制作</text>
+      </button>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="content" wx:if="{{history.length > 0}}">
+    <view class="action-buttons">
+      <button 
+        class="btn btn-secondary" 
+        bindtap="exportHistory"
+      >
+        <text>📤 导出记录</text>
+      </button>
+      
+      <button 
+        class="btn btn-ghost" 
+        bindtap="clearAllHistory"
+      >
+        <text>🗑️ 清空记录</text>
+      </button>
+    </view>
+  </view>
+</view>

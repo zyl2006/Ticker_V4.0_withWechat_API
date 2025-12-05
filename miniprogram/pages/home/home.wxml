@@ -1,0 +1,107 @@
+<!--pages/home/home.wxml-->
+<!--首页 - 项目介绍和车票样式展示-->
+
+<view class="container">
+  <!-- 加载状态 -->
+  <view wx:if="{{loading}}" class="loading">
+    <view class="loading-icon"></view>
+    <text>加载中...</text>
+  </view>
+
+  <!-- 错误状态 -->
+  <view wx:elif="{{error}}" class="content">
+    <view class="message message-error">
+      <text class="message-icon">⚠️</text>
+      <text>{{error}}</text>
+    </view>
+    <button class="btn btn-primary" bindtap="retry">重试</button>
+  </view>
+
+  <!-- 主要内容 -->
+  <view wx:else>
+    <!-- 项目介绍 -->
+    <view class="hero-section">
+      <view class="hero-content">
+        <view class="project-logo">
+          <text class="logo-icon">🎫</text>
+        </view>
+        <view class="project-title">{{projectInfo.name}}</view>
+        <view class="project-description">{{projectInfo.description}}</view>
+        <view class="project-version">版本 {{projectInfo.version}}</view>
+      </view>
+    </view>
+
+    <!-- 功能特色 -->
+    <view class="content">
+      <view class="title">
+        <text class="title-icon">✨</text>
+        <text>功能特色</text>
+      </view>
+      
+      <view class="features-grid">
+        <view 
+          wx:for="{{projectInfo.features}}" 
+          wx:key="*this"
+          class="feature-card"
+        >
+          <text class="feature-icon">🎯</text>
+          <text class="feature-text">{{item}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 车票样式展示 -->
+    <view class="content">
+      <view class="title">
+        <text class="title-icon">🎨</text>
+        <text>选择车票样式</text>
+      </view>
+      
+      <view class="subtitle">点击下方样式卡片开始制作您的专属车票</view>
+      
+      <view class="styles-grid">
+        <view 
+          wx:for="{{styles}}" 
+          wx:key="*this"
+          class="style-card"
+          data-style="{{item}}"
+          bindtap="onStyleSelect"
+        >
+          <view class="style-preview-container">
+            <text class="style-placeholder">{{item}}</text>
+          </view>
+          <view class="style-info">
+            <text class="style-name">{{item}}</text>
+            <text class="style-desc">点击开始制作</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 快速操作 -->
+    <view class="content">
+      <view class="title">
+        <text class="title-icon">🚀</text>
+        <text>快速开始</text>
+      </view>
+      
+      <view class="quick-actions">
+        <button 
+          class="btn btn-primary btn-large" 
+          bindtap="startMaking"
+        >
+          <text class="btn-icon">🎫</text>
+          <text>开始制作车票</text>
+        </button>
+        
+        <button 
+          class="btn btn-secondary btn-large" 
+          bindtap="viewHistory"
+        >
+          <text class="btn-icon">📚</text>
+          <text>查看历史记录</text>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

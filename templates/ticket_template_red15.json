@@ -1,0 +1,274 @@
+{
+  "canvas": {
+    "width": 1440,
+    "height": 999,
+    "background": "template_ticket.png"
+  },
+  "apply_$": false,
+  "generate_qr_code": true,
+  "fields": {
+    "直线1": {
+      "type": "line",
+      "start": [605, 300],
+      "end": [820, 300],
+      "fill": "#000000",
+      "width": 3
+    },
+    "直线2": {
+      "type": "line",
+      "start": [790, 290],
+      "end": [820, 300],
+      "fill": "#000000",
+      "width": 3
+    },
+    "上票号": {
+      "x": 80,
+      "y": 120,
+      "anchor": "la",
+      "segments": [
+        {"text": "{上票号}", "font_path": "fonts/arial.ttf", "size":70, "fill": "#FF0000", "letter_spacing": 0}
+      ]
+    },
+    "检票口": {
+      "x": 1340,
+      "y": 120,
+      "anchor": "ra",
+      "segments": [
+        {"text": "{检票口}", "font_path": "fonts/simsun.ttc", "size":60, "fill": "#000000", "letter_spacing": 0}
+      ]
+    },
+    "出发站": {
+      "x": 315,
+      "y": 200,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{出发站}", "font_path": "fonts/方正黑体简体.ttf", "size":90, "fill": "#000000", "letter_spacing": 2},
+        {"text": "站", "font_path": "fonts/simsun.ttc", "size": 60, "fill": "#000000", "letter_spacing": 2,"y_offset": 15}
+      ]
+    },
+    "到达站": {
+      "x": 1115,
+      "y": 200,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{到达站}", "font_path": "fonts/方正黑体简体.ttf", "size": 90, "fill": "#000000", "letter_spacing": 2},
+        {"text": "站", "font_path": "fonts/simsun.ttc", "size": 60, "fill": "#000000", "letter_spacing": 2,"y_offset": 15}
+      ]
+    },
+    "拼音1": {
+      "x": 315,
+      "y": 290,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{出发站拼音}", "font_path": "fonts/仿宋_GB2312.ttf", "size":50, "fill": "#000000", "scale_x": 0.8,"letter_spacing": 2}
+      ]
+    },
+    "拼音2": {
+      "x": 1115,
+      "y": 290,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{到达站拼音}", "font_path": "fonts/仿宋_GB2312.ttf", "size":50, "fill": "#000000","scale_x": 0.8, "letter_spacing": 2}
+      ]
+    },
+    "车次": {
+      "x": 715,
+      "y": 200,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{车次类型}", "font_path": "fonts/times.ttf", "size": 80, "fill": "#000000",  "scale_x": 0.8,"letter_spacing": 0},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "{车次号}", "font_path": "fonts/times.ttf", "size": 85, "fill": "#000000", "letter_spacing": 0},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3}
+      ]
+    },
+    "日期": {
+      "x": 90,
+      "y": 360,
+      "anchor": "la",
+      "segments": [
+        {"text": "{年}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 5},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "年", "font_path": "fonts/simsun.ttc", "size": 40, "fill": "#000000", "letter_spacing": 3},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "{月}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 5},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "月", "font_path": "fonts/simsun.ttc", "size":40, "fill": "#000000", "letter_spacing": 3},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "{日}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 5},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "日 ", "font_path": "fonts/simsun.ttc", "size": 40, "fill": "#000000", "letter_spacing":0},
+        {"text": "", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 0},
+        {"text": "{时}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 5},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": ":", "font_path": "fonts/simsun.ttc", "size":50, "fill": "#000000", "letter_spacing": 3},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "{分}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 5},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "开", "font_path": "fonts/simsun.ttc", "size": 40, "fill": "#000000", "letter_spacing": 3}
+      ]
+    },
+    "座位": {
+      "x": 1010,
+      "y": 360,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{“加”车}", "font_path": "fonts/simhei.ttf", "size": 60, "fill": "#000000", "letter_spacing": 3,"y_offset": -6},
+        {"text": "{车厢号}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 3},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "{车type}", "font_path": "fonts/simsun.ttc", "size": 40, "fill": "#000000", "letter_spacing": 3},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "{席位号}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 3},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "{普通序号}", "font_path": "fonts/simsun.ttc", "size":50, "fill": "#000000", "letter_spacing": 1,"y_offset": -3},
+        {"text": "{号}", "font_path": "fonts/simsun.ttc", "size":40, "fill": "#000000", "letter_spacing": 3},
+        {"text": "", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "{卧代座序号}", "font_path": "fonts/simsun.ttc", "size":60, "fill": "#000000", "letter_spacing": 1,"y_offset": -8}
+      ]
+    },
+    "席别": {
+      "x": 1090,
+      "y": 440,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{席别}", "font_path": "fonts/simhei.ttf", "size": 55, "fill": "#000000", "letter_spacing": 0}
+      ]
+    },
+    "车票类型": {
+      "x": 690,
+      "y": 460,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{票种}", "font_path": "fonts/simsun.ttc", "size": 55, "fill": "#000000", "letter_spacing": 20}
+      ]
+    },
+    "票价": {
+      "x": 90,
+      "y": 440,
+      "anchor": "la",
+      "segments": [
+        {"text": "$", "font_path": "fonts/TrainTicketFont2.ttf", "size": 40, "fill": "#000000", "letter_spacing": 10},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 40, "fill": "#000000", "letter_spacing": 10},
+        {"text": "{票价1}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 3},
+        {"text": ".", "font_path": "fonts/simsun.ttc", "size": 50, "fill": "#000000", "letter_spacing": 3},
+        {"text": "{票价2}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 3},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 3},
+        {"text": "元", "font_path": "fonts/simsun.ttc", "size": 35, "fill": "#000000", "letter_spacing": 0}
+      ]
+    },
+    "注释1": {
+      "x": 90,
+      "y": 505,
+      "anchor": "la",
+      "segments": [
+        {"text": "{注释1}", "font_path": "fonts/simsun.ttc", "size": 50, "fill": "#000000", "letter_spacing": 0}
+      ]
+    },
+    "注释2": {
+      "x": 90,
+      "y": 570,
+      "anchor": "la",
+      "segments": [
+        {"text": "{注释2}", "font_path": "fonts/simsun.ttc", "size": 50, "fill": "#000000", "letter_spacing": 0}
+      ]
+    },
+    "事由": {
+      "x": 1200,
+      "y": 550,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{事由(二维码上方）}", "font_path": "fonts/方正黑体简体.ttf", "size": 45, "fill": "#000000", "letter_spacing": 0}
+      ]
+    },
+    "通票": {
+      "x": 90,
+      "y": 505,
+      "anchor": "la",
+      "segments": [
+        {"text": "{加快等级}", "font_path": "fonts/simsun.ttc", "size": 50, "fill": "#000000", "letter_spacing": 0},
+        {"text": "{经由type}", "font_path": "fonts/simsun.ttc", "size": 35, "fill": "#000000", "letter_spacing": 0,"y_offset": 8},
+        {"text": "{经由}", "font_path": "fonts/simsun.ttc", "size": 50, "fill": "#000000", "letter_spacing": 0,"y_offset": 0},
+        {"text": "{至type}", "font_path": "fonts/simsun.ttc", "size": 35, "fill": "#000000", "letter_spacing": 0,"y_offset":8},
+        {"text": "{终到站}", "font_path": "fonts/simhei.ttf", "size": 50, "fill": "#000000", "letter_spacing": 0},
+        {"text": "{站type}", "font_path": "fonts/simsun.ttc", "size": 35, "fill": "#000000", "letter_spacing": 0,"y_offset":8},
+        {"text": "{有效期}", "font_path": "fonts/simsun.ttc", "size": 50, "fill": "#000000", "letter_spacing": 0}
+      ]
+    },
+    "提示1": {
+      "x": 540,
+      "y": 725,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{提示1}", "font_path": "fonts/simsun.ttc", "size": 45, "fill": "#000000", "letter_spacing": 0}
+      ]
+    },
+    "提示2": {
+      "x": 540,
+      "y": 780,
+      "anchor": "ma",
+      "segments": [
+        {"text": "{提示2}", "font_path": "fonts/simsun.ttc", "size":45, "fill": "#000000", "letter_spacing": 0}
+      ]
+    },
+    "框1": {
+      "type": "dashed_rect",
+      "xy": [135, 715, 950, 835],
+      "dash_length": 20,
+      "fill": "#000000",
+      "width": 3
+    },
+    "身份信息": {
+      "x": 90,
+      "y": 645,
+      "anchor": "la",
+      "segments": [
+        {"text": "{其它证件标识符（证件号处）}", "font_path": "fonts/仿宋_GB2312.ttf", "size": 65, "fill": "#000000", "letter_spacing": 3,"y_offset": -8},
+        {"text": "{身份证号1}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 3},
+        {"text": "{星号}", "font_path": "fonts/times.ttf", "size": 70, "fill": "#000000", "letter_spacing": 0,"y_offset": -8},
+        {"text": "{身份证号2}", "font_path": "fonts/TrainTicketFont2.ttf", "size": 50, "fill": "#000000", "letter_spacing": 3},
+        {"text": " ", "font_path": "fonts/simsun.ttc", "size": 20, "fill": "#000000", "letter_spacing": 10}
+        
+      ]
+    },
+    "姓名": {
+      "x": 720,
+      "y": 645,
+      "anchor": "la",
+      "segments": [
+        {"text": "{姓名}", "font_path": "fonts/simsun.ttc", "size": 60, "fill": "#000000", "letter_spacing": 0,"y_offset": -8}
+      ]
+    },
+    "票号": {
+      "x": 90,
+      "y": 850,
+      "anchor": "la",
+      "segments": [
+        {"text": "{下票号（字母之前）}", "font_path": "fonts/timesbd.ttf", "size": 55, "fill": "#000000", "scale_x": 0.7, "letter_spacing":5},
+        {"text": "{上票号字母}", "font_path": "fonts/仿宋_GB2312.ttf", "size": 60, "fill": "#000000", "letter_spacing": 5,"y_offset": 5},
+        {"text": "{上票号数字}", "font_path": "fonts/timesbd.ttf", "size": 55, "fill": "#000000",  "scale_x": 0.7,"letter_spacing": 5}
+      ]
+    },
+    "证件类型": {
+      "x": 660,
+      "y": 850,
+      "anchor": "la",
+      "segments": [
+        {"text": "{证件类型}", "font_path": "fonts/times.ttf", "size": 55, "fill": "#000000", "scale_x": 0.65,"letter_spacing": 0}
+      ]
+    },
+    "发售站信息（和证件类型2选1）": {
+      "x": 660,
+      "y": 860,
+      "anchor": "la",
+      "segments": [
+        {"text": "{发售站}", "font_path": "fonts/simsun.ttc", "size": 45, "fill": "#000000", "scale_x": 1,"letter_spacing": 0}
+      ]
+    },
+    "二维码": {
+      "x": 1200,
+      "y": 755,
+      "size": 290,
+      "anchor": "ma"
+    }
+  }
+}

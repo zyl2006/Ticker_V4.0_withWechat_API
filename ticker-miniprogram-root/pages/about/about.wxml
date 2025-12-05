@@ -1,0 +1,101 @@
+<!--pages/about/about.wxml-->
+<!--关于页面-->
+
+<view class="container">
+  <!-- 应用信息 -->
+  <view class="content">
+    <view class="app-info">
+      <view class="app-icon">🎫</view>
+      <view class="app-name">Ticker-车票儿</view>
+      <view class="app-desc">精细化纪念车票智能生成工具</view>
+      <view class="app-version">版本 {{version}}</view>
+    </view>
+  </view>
+
+  <!-- 功能菜单 -->
+  <view class="content">
+    <view class="menu-group">
+      <view class="menu-item" bindtap="viewHistory">
+        <view class="menu-icon">📋</view>
+        <view class="menu-text">历史记录</view>
+        <view class="menu-badge" wx:if="{{history.length > 0}}">{{history.length}}</view>
+        <view class="menu-arrow">></view>
+      </view>
+      
+      <view class="menu-item" bindtap="checkUpdate">
+        <view class="menu-icon">🔄</view>
+        <view class="menu-text">检查更新</view>
+        <view class="menu-arrow">></view>
+      </view>
+      
+      <view class="menu-item" bindtap="contactService">
+        <view class="menu-icon">💬</view>
+        <view class="menu-text">联系客服</view>
+        <view class="menu-arrow">></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 数据管理 -->
+  <view class="content">
+    <view class="title">
+      <text class="title-icon">🗂️</text>
+      <text>数据管理</text>
+    </view>
+    
+    <view class="menu-group">
+      <view class="menu-item" bindtap="clearDraft">
+        <view class="menu-icon">🗑️</view>
+        <view class="menu-text">清除草稿</view>
+        <view class="menu-arrow">></view>
+      </view>
+      
+      <view class="menu-item" bindtap="clearHistory">
+        <view class="menu-icon">🗑️</view>
+        <view class="menu-text">清除历史记录</view>
+        <view class="menu-arrow">></view>
+      </view>
+      
+      <view class="menu-item danger" bindtap="clearAllData">
+        <view class="menu-icon">⚠️</view>
+        <view class="menu-text">清除所有数据</view>
+        <view class="menu-arrow">></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 应用信息 -->
+  <view class="content">
+    <view class="title">
+      <text class="title-icon">ℹ️</text>
+      <text>应用信息</text>
+    </view>
+    
+    <view class="info-list">
+      <view class="info-item">
+        <text class="info-label">版本号</text>
+        <text class="info-value">{{version}}</text>
+      </view>
+      
+      <view class="info-item">
+        <text class="info-label">构建时间</text>
+        <text class="info-value">{{buildTime}}</text>
+      </view>
+      
+      <view class="info-item">
+        <text class="info-label">历史记录</text>
+        <text class="info-value">{{history.length}} 条</text>
+      </view>
+    </view>
+    
+    <button class="btn btn-ghost" bindtap="copyVersion">
+      <text>📋 复制版本信息</text>
+    </button>
+  </view>
+
+  <!-- 版权信息 -->
+  <view class="footer">
+    <text class="copyright">© 2024 Ticker-车票儿</text>
+    <text class="copyright">精细化纪念车票智能生成工具</text>
+  </view>
+</view>

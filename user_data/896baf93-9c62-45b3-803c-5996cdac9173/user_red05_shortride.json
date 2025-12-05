@@ -1,0 +1,122 @@
+{
+    "事由": {
+        "value": "",
+        "enabled": true
+    },
+    "二维码数据": {
+        "value": "",
+        "enabled": true
+    },
+    "其它证件标识符": {
+        "value": "HZ",
+        "enabled": true
+    },
+    "发售站": {
+        "value": "沈阳北站",
+        "enabled": true
+    },
+    "出发站": {
+        "value": "西  安",
+        "enabled": true
+    },
+    "出发站拼音": {
+        "value": "Xi’an",
+        "enabled": true
+    },
+    "车次类型": {
+        "value": "K",
+        "enabled": true
+    },
+    "车次号": {
+        "value": "1003",
+        "enabled": true
+    },
+    "到达站": {
+        "value": "重庆西",
+        "enabled": true
+    },
+    "到达站拼音": {
+        "value": "Chongqingxi",
+        "enabled": true
+    },
+    "加车": {
+        "value": "",
+        "enabled": true
+    },
+    "车厢号": {
+        "value": "09",
+        "enabled": true
+    },
+    "车type": {
+        "value": "车",
+        "enabled": true
+    },
+    "席位号": {
+        "value": "022",
+        "enabled": true
+    },
+    "卧代座序号": {
+        "value": "号C",
+        "enabled": true
+    },
+    "席别": {
+        "value": "（新空调硬卧代硬座快速）",
+        "enabled": true
+    },
+    "年": {
+        "value": "2025",
+        "enabled": true
+    },
+    "月": {
+        "value": "08",
+        "enabled": true
+    },
+    "日": {
+        "value": "30",
+        "enabled": true
+    },
+    "时": {
+        "value": "08",
+        "enabled": true
+    },
+    "分": {
+        "value": "46",
+        "enabled": true
+    },
+    "有效期": {
+        "value": "2",
+        "enabled": true
+    },
+    "检票口": {
+        "value": "沈阳北站",
+        "enabled": true
+    },
+    "注释1": {
+        "value": "限乘当日当次车",
+        "enabled": true
+    },
+    "注释2": {
+        "value": "",
+        "enabled": true
+    },
+    "票价": {
+        "value": "103.00",
+        "enabled": true
+    },
+    "下票号": {
+        "value": "53885000160627A00000111621587007515471961356472061661234567",
+        "enabled": true
+    },
+    "票种": {
+        "value": "网折",
+        "enabled": true
+    },
+    "通票经由": {
+        "value": "",
+        "enabled": true
+    },
+    "通票到站": {
+        "value": "",
+        "enabled": true
+    }
+}

@@ -1,0 +1,116 @@
+/* pages/preview/preview.wxss */
+/* 预览页面样式 */
+
+.preview-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 32rpx;
+}
+
+/* 图片容器 */
+.image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32rpx;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: 32rpx;
+}
+
+.preview-image {
+  width: 100%;
+  max-width: 600rpx;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 32rpx;
+  flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+  flex: 1;
+  min-width: 200rpx;
+}
+
+/* 提示信息 */
+.tips {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: 24rpx;
+  border: 2rpx solid var(--border-color);
+}
+
+.tip-item {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.tip-item:last-child {
+  margin-bottom: 0;
+}
+
+.tip-icon {
+  font-size: 32rpx;
+  color: var(--primary-color);
+}
+
+.tip-text {
+  font-size: 24rpx;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 750rpx) {
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-buttons .btn {
+    width: 100%;
+  }
+  
+  .preview-content {
+    padding: 16rpx;
+  }
+  
+  .image-container {
+    padding: 16rpx;
+  }
+}
+
+/* 图片加载动画 */
+.preview-image {
+  transition: opacity 0.3s ease;
+}
+
+/* 按钮悬停效果 */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* 提示信息动画 */
+.tips {
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

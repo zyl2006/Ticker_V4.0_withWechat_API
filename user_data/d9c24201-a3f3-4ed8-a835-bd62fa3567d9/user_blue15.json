@@ -1,0 +1,190 @@
+{
+    "事由(二维码上方）": {
+        "value": "越站",
+        "enabled": true
+    },
+    "上票号": {
+        "value": "A000001",
+        "enabled": true
+    },
+    "二维码数据(无需填写）": {
+        "value": "",
+        "enabled": true
+    },
+    "其它证件标识符（证件号处）": {
+        "value": "HZ",
+        "enabled": true
+    },
+    "检票口": {
+        "value": "到站补票",
+        "enabled": true
+    },
+    "出发站": {
+        "value": "西  安",
+        "enabled": true
+    },
+    "出发站拼音": {
+        "value": "Xi’an",
+        "enabled": true
+    },
+    "车次类型": {
+        "value": "K",
+        "enabled": true
+    },
+    "车次号": {
+        "value": "1003",
+        "enabled": true
+    },
+    "到达站": {
+        "value": "重庆西",
+        "enabled": true
+    },
+    "到达站拼音": {
+        "value": "Chongqingxi",
+        "enabled": true
+    },
+    "“加”车": {
+        "value": "",
+        "enabled": false
+    },
+    "车厢号": {
+        "value": "",
+        "enabled": false
+    },
+    "车type": {
+        "value": "",
+        "enabled": false
+    },
+    "席位号": {
+        "value": "",
+        "enabled": false
+    },
+    "普通序号": {
+        "value": "",
+        "enabled": false
+    },
+    "号": {
+        "value": "",
+        "enabled": false
+    },
+    "卧代座序号": {
+        "value": "不对号入座",
+        "enabled": true
+    },
+    "席别": {
+        "value": "新空调硬座",
+        "enabled": true
+    },
+    "年": {
+        "value": "2025",
+        "enabled": true
+    },
+    "月": {
+        "value": "08",
+        "enabled": true
+    },
+    "日": {
+        "value": "30",
+        "enabled": true
+    },
+    "时": {
+        "value": "08",
+        "enabled": true
+    },
+    "分": {
+        "value": "46",
+        "enabled": true
+    },
+    "证件类型": {
+        "value": "",
+        "enabled": false
+    },
+    "身份证号1": {
+        "value": "",
+        "enabled": false
+    },
+    "星号": {
+        "value": "*",
+        "enabled": true
+    },
+    "身份证号2": {
+        "value": "",
+        "enabled": false
+    },
+    "姓名": {
+        "value": "陈文杰",
+        "enabled": true
+    },
+    "票价1": {
+        "value": "102",
+        "enabled": true
+    },
+    "票价2": {
+        "value": "0",
+        "enabled": true
+    },
+    "注释1": {
+        "value": "退票费",
+        "enabled": true
+    },
+    "注释2": {
+        "value": "仅供报销使用",
+        "enabled": true
+    },
+    "票种": {
+        "value": "学网现",
+        "enabled": true
+    },
+    "提示1": {
+        "value": "报销凭证 遗失不补",
+        "enabled": true
+    },
+    "提示2": {
+        "value": "陈文杰好帅",
+        "enabled": true
+    },
+    "加快等级": {
+        "value": "",
+        "enabled": true
+    },
+    "经由type": {
+        "value": "",
+        "enabled": true
+    },
+    "经由": {
+        "value": "",
+        "enabled": true
+    },
+    "至type": {
+        "value": "",
+        "enabled": true
+    },
+    "终到站": {
+        "value": "",
+        "enabled": true
+    },
+    "站type": {
+        "value": "",
+        "enabled": true
+    },
+    "有效期": {
+        "value": "",
+        "enabled": true
+    },
+    "发售站": {
+        "value": "",
+        "enabled": true
+    },
+    "上票号字母": {
+        "value": "A",
+        "enabled": true
+    },
+    "下票号（字母之前）": {
+        "value": "49820000010802",
+        "enabled": true
+    },
+    "上票号数字": {
+        "value": "000001",
+        "enabled": true
+    }
+}

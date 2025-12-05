@@ -1,0 +1,412 @@
+/* pages/history/history.wxss */
+/* 历史结果页面样式 */
+
+/* 统计信息 */
+.stats-section {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); /* 清新、低饱和度的渐变 */
+  padding: 48rpx 32rpx;
+  margin-bottom: 32rpx;
+}
+
+.stats-card {
+  text-align: center;
+  color: #374151; /* 深灰色文字，与清新背景搭配 */
+}
+
+.stats-number {
+  font-size: 72rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx;
+  text-shadow: none; /* 移除阴影，与清新风格保持一致 */
+}
+
+.stats-label {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+/* 筛选和排序面板 */
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 16rpx;
+}
+
+.filter-panel {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: 32rpx;
+  margin-top: 16rpx;
+  border: 2rpx solid var(--border-color);
+}
+
+.filter-section {
+  margin-bottom: 32rpx;
+}
+
+.filter-section:last-child {
+  margin-bottom: 0;
+}
+
+.filter-label {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16rpx;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 24rpx 32rpx;
+  border-radius: var(--radius-lg);
+  border: 2rpx solid var(--border-color);
+  background: var(--bg-primary);
+  font-size: 28rpx;
+  color: var(--text-primary);
+  box-sizing: border-box;
+}
+
+.filter-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4rpx rgba(59, 130, 246, 0.1);
+}
+
+/* 样式筛选 */
+.filter-scroll {
+  margin-top: 16rpx;
+}
+
+.filter-list {
+  display: flex;
+  gap: 16rpx;
+  padding-bottom: 16rpx;
+}
+
+.filter-item {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 16rpx 32rpx;
+  border: 2rpx solid var(--border-color);
+  transition: var(--transition);
+  flex-shrink: 0;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.filter-item:active {
+  transform: scale(0.98);
+}
+
+.filter-item.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* 排序选项 */
+.sort-options {
+  display: flex;
+  gap: 16rpx;
+}
+
+.sort-option {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 16rpx 32rpx;
+  border: 2rpx solid var(--border-color);
+  transition: var(--transition);
+  font-size: 28rpx;
+  font-weight: 500;
+  color: var(--text-primary);
+  flex: 1;
+  text-align: center;
+}
+
+.sort-option:active {
+  transform: scale(0.98);
+}
+
+.sort-option.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* 历史记录项 */
+.history-item {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  border: 2rpx solid var(--border-color);
+  display: flex;
+  gap: 24rpx;
+  transition: var(--transition);
+}
+
+.history-item:active {
+  transform: scale(0.99);
+  border-color: var(--primary-color);
+}
+
+.item-preview {
+  flex-shrink: 0;
+}
+
+.preview-thumb {
+  width: 160rpx;
+  height: 120rpx;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+/* 路线信息 */
+.item-route {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-bottom: 8rpx;
+}
+
+.route-text {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.route-arrow {
+  font-size: 28rpx;
+  color: var(--text-secondary);
+}
+
+/* 元信息 */
+.item-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-style {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  padding: 8rpx 16rpx;
+  border-radius: var(--radius-md);
+}
+
+.item-time {
+  font-size: 24rpx;
+  color: var(--text-muted);
+}
+
+/* 详细信息行 */
+.item-info-row {
+  margin-top: 8rpx;
+}
+
+.info-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24rpx;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.info-label {
+  font-size: 24rpx;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 26rpx;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.item-actions {
+  display: flex;
+  gap: 16rpx;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 16rpx 24rpx;
+  font-size: 24rpx;
+  min-height: 60rpx;
+  flex: 1;
+  min-width: 120rpx;
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400rpx;
+  padding: 64rpx 32rpx;
+}
+
+.empty-content {
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.empty-icon {
+  font-size: 128rpx;
+  display: block;
+  margin-bottom: 32rpx;
+  opacity: 0.3;
+}
+
+.empty-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.empty-desc {
+  font-size: 28rpx;
+  display: block;
+  margin-bottom: 48rpx;
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: 24rpx;
+  margin-top: 32rpx;
+}
+
+.action-buttons .btn {
+  flex: 1;
+  min-height: 100rpx;
+  font-size: 32rpx;
+}
+
+/* 响应式设计 */
+@media (max-width: 750rpx) {
+  .filter-panel {
+    padding: 24rpx;
+  }
+
+  .filter-section {
+    margin-bottom: 24rpx;
+  }
+
+  .filter-input {
+    padding: 20rpx 24rpx;
+    font-size: 26rpx;
+  }
+
+  .filter-item, .sort-option {
+    padding: 14rpx 24rpx;
+    font-size: 26rpx;
+  }
+
+  .history-item {
+    flex-direction: column;
+    padding: 24rpx;
+  }
+
+  .item-preview {
+    align-self: center;
+  }
+
+  .preview-thumb {
+    width: 200rpx;
+    height: 150rpx;
+  }
+
+  .item-route {
+    justify-content: center;
+  }
+
+  .route-text {
+    font-size: 30rpx;
+  }
+
+  .item-meta {
+    flex-direction: column;
+    gap: 12rpx;
+    align-items: center;
+  }
+
+  .info-items {
+    justify-content: center;
+  }
+
+  .info-item {
+    flex-direction: column;
+    gap: 4rpx;
+    text-align: center;
+  }
+
+  .item-actions {
+    justify-content: center;
+  }
+
+  .btn-sm {
+    min-width: 100rpx;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons .btn {
+    width: 100%;
+  }
+}
+
+/* 加载状态优化 */
+.loading {
+  min-height: 400rpx;
+}
+
+/* 错误状态优化 */
+.message {
+  margin-bottom: 32rpx;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8rpx;
+  height: 8rpx;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: 4rpx;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4rpx;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}

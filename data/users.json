@@ -1,0 +1,59 @@
+{
+  "3d7da99b-05fb-4dce-a22e-36e3890561c3": {
+    "user_id": "3d7da99b-05fb-4dce-a22e-36e3890561c3",
+    "nickName": "测试用户",
+    "avatarUrl": "https://example.com/avatar.jpg",
+    "gender": 1,
+    "openId": "test_1762444879",
+    "register_time": "2025-11-07T00:01:21.729267",
+    "last_login": "2025-11-07T00:01:21.729274"
+  },
+  "e419dacb-adde-4d8c-ba4a-a400468c1df9": {
+    "user_id": "e419dacb-adde-4d8c-ba4a-a400468c1df9",
+    "nickName": "微信用户",
+    "avatarUrl": "https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132",
+    "gender": 0,
+    "openId": "2104195685",
+    "register_time": "2025-11-07T00:05:37.114871",
+    "last_login": "2025-11-07T00:08:32.083263"
+  },
+  "16c91e6b-be65-4839-b3c1-192df7eb9f08": {
+    "user_id": "16c91e6b-be65-4839-b3c1-192df7eb9f08",
+    "nickName": "test",
+    "avatarUrl": "",
+    "gender": 0,
+    "openId": "",
+    "register_time": "2025-11-07T00:22:20.162410",
+    "last_login": "2025-11-07T00:22:20.162422"
+  },
+  "905f4026-74b2-4756-aba2-421276042435": {
+    "user_id": "905f4026-74b2-4756-aba2-421276042435",
+    "username": "test_user_1762447824",
+    "password_hash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "nickName": "测试用户",
+    "avatarUrl": "",
+    "gender": 0,
+    "register_time": "2025-11-07T00:50:26.537197",
+    "last_login": "2025-11-07T00:50:26.537239"
+  },
+  "a3abbdf6-25bb-4bd9-b705-892ee1ff7157": {
+    "user_id": "a3abbdf6-25bb-4bd9-b705-892ee1ff7157",
+    "username": "test_user_1762447873",
+    "password_hash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "nickName": "测试用户",
+    "avatarUrl": "",
+    "gender": 0,
+    "register_time": "2025-11-07T00:51:15.640667",
+    "last_login": "2025-11-07T00:51:15.640673"
+  },
+  "38b5bd44-8f28-42cb-865f-948ccc7b00ef": {
+    "user_id": "38b5bd44-8f28-42cb-865f-948ccc7b00ef",
+    "username": "test",
+    "password_hash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "nickName": "cwj",
+    "avatarUrl": "",
+    "gender": 0,
+    "register_time": "2025-11-07T00:55:48.561658",
+    "last_login": "2025-11-07T00:55:48.561674"
+  }
+}

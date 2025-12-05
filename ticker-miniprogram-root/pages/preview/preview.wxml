@@ -1,0 +1,72 @@
+<!--pages/preview/preview.wxml-->
+<!--预览页面-->
+
+<view class="container">
+  <!-- 加载状态 -->
+  <view wx:if="{{loading}}" class="loading">
+    <view class="loading-icon"></view>
+    <text>加载中...</text>
+  </view>
+
+  <!-- 错误状态 -->
+  <view wx:elif="{{error}}" class="content">
+    <view class="message message-error">
+      <text class="message-icon">⚠️</text>
+      <text>{{error}}</text>
+    </view>
+    <button class="btn btn-primary" bindtap="goBack">返回</button>
+  </view>
+
+  <!-- 预览内容 -->
+  <view wx:else class="preview-content">
+    <!-- 预览图片 -->
+    <view class="image-container">
+      <image 
+        class="preview-image"
+        src="{{imageUrl}}"
+        mode="widthFix"
+        bindload="onImageLoad"
+        binderror="onImageError"
+        bindlongpress="onImageLongPress"
+        show-menu-by-longpress="{{true}}"
+      />
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="action-buttons">
+      <button 
+        class="btn btn-primary" 
+        bindtap="saveToAlbum"
+        disabled="{{!canSave}}"
+      >
+        <text>💾 保存到相册</text>
+      </button>
+      
+      <button 
+        class="btn btn-secondary" 
+        bindtap="shareImage"
+      >
+        <text>📤 分享图片</text>
+      </button>
+      
+      <button 
+        class="btn btn-ghost" 
+        bindtap="remake"
+      >
+        <text>🔄 重新制作</text>
+      </button>
+    </view>
+
+    <!-- 提示信息 -->
+    <view class="tips">
+      <view class="tip-item">
+        <text class="tip-icon">💡</text>
+        <text class="tip-text">长按图片可以保存或分享</text>
+      </view>
+      <view class="tip-item">
+        <text class="tip-icon">📱</text>
+        <text class="tip-text">保存的图片可以在相册中查看</text>
+      </view>
+    </view>
+  </view>
+</view>

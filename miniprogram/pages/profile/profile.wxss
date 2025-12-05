@@ -1,0 +1,253 @@
+/* pages/profile/profile.wxss */
+/* 用户中心页面样式 */
+
+/* 用户信息卡片 */
+.user-card {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+  padding: 48rpx 32rpx;
+  margin-bottom: 32rpx;
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  color: white;
+}
+
+.user-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 4rpx solid rgba(255, 255, 255, 0.3);
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 36rpx;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8rpx;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+.user-desc {
+  font-size: 24rpx;
+  opacity: 0.8;
+}
+
+/* 统计数据 */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24rpx;
+  margin-top: 24rpx;
+}
+
+.stat-item {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: 32rpx 24rpx;
+  text-align: center;
+  border: 2rpx solid var(--border-color);
+  transition: var(--transition);
+}
+
+.stat-item:active {
+  transform: scale(0.98);
+  border-color: var(--primary-color);
+}
+
+.stat-number {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: var(--text-secondary);
+}
+
+/* 设置列表 */
+.settings-list {
+  margin-top: 24rpx;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32rpx 0;
+  border-bottom: 2rpx solid var(--border-color);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-info {
+  flex: 1;
+}
+
+.setting-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.setting-desc {
+  font-size: 24rpx;
+  color: var(--text-secondary);
+}
+
+/* 操作列表 */
+.action-list {
+  margin-top: 24rpx;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  padding: 32rpx 0;
+  border-bottom: 2rpx solid var(--border-color);
+  transition: var(--transition);
+}
+
+.action-item:last-child {
+  border-bottom: none;
+}
+
+.action-item:active {
+  background: var(--bg-secondary);
+  transform: scale(0.99);
+}
+
+.action-icon {
+  font-size: 32rpx;
+  margin-right: 24rpx;
+  width: 48rpx;
+  text-align: center;
+}
+
+.action-title {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.action-arrow {
+  font-size: 24rpx;
+  color: var(--text-muted);
+}
+
+/* 关于列表 */
+.about-list {
+  margin-top: 24rpx;
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  padding: 32rpx 0;
+  border-bottom: 2rpx solid var(--border-color);
+  transition: var(--transition);
+}
+
+.about-item:last-child {
+  border-bottom: none;
+}
+
+.about-item:active {
+  background: var(--bg-secondary);
+  transform: scale(0.99);
+}
+
+.about-icon {
+  font-size: 32rpx;
+  margin-right: 24rpx;
+  width: 48rpx;
+  text-align: center;
+}
+
+.about-title {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.about-arrow {
+  font-size: 24rpx;
+  color: var(--text-muted);
+}
+
+/* 应用信息 */
+.app-info {
+  margin-top: 48rpx;
+  padding-top: 32rpx;
+  border-top: 2rpx solid var(--border-color);
+  text-align: center;
+}
+
+.app-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.app-version {
+  font-size: 24rpx;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.app-developer {
+  font-size: 24rpx;
+  color: var(--text-muted);
+}
+
+/* 响应式设计 */
+@media (max-width: 750rpx) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-info {
+    margin-top: 16rpx;
+  }
+}
+
+/* 加载状态优化 */
+.loading {
+  min-height: 400rpx;
+}
+
+/* 错误状态优化 */
+.message {
+  margin-bottom: 32rpx;
+}
+
+/* 按钮样式优化 */
+.btn-sm {
+  padding: 16rpx 32rpx;
+  font-size: 24rpx;
+  min-height: 60rpx;
+}

@@ -1,0 +1,146 @@
+{
+  "canvas": {
+    "background": "template_ticket.png",
+    "height": 999,
+    "width": 1440
+  },
+  "fields": {
+    "上票号": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "事由": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "二维码": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "出发站": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "到达站": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "发售站信息（和证件类型2选1）": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "姓名": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "席别": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "座位": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "拼音1": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "拼音2": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "提示1": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "提示2": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "日期": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "框1": {
+      "description": "",
+      "required": false,
+      "type": "dashed_rect"
+    },
+    "检票口": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "注释1": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "注释2": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "直线1": {
+      "description": "",
+      "required": false,
+      "type": "line"
+    },
+    "直线2": {
+      "description": "",
+      "required": false,
+      "type": "line"
+    },
+    "票价": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "票号": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "证件类型": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "身份信息": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "车次": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "车票类型": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    },
+    "通票": {
+      "description": "",
+      "required": false,
+      "type": "text"
+    }
+  },
+  "style": "red15",
+  "success": true
+}

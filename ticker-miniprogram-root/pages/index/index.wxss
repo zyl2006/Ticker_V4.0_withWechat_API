@@ -1,0 +1,201 @@
+/* pages/index/index.wxss */
+/* 首页样式 */
+
+/* 服务器状态样式 */
+.server-status {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  padding: 24rpx;
+  background: #f8f9fa;
+  border-radius: var(--radius-lg);
+  border: 2rpx solid var(--border-color);
+}
+
+.status-indicator {
+  font-size: 32rpx;
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.status-indicator.checking {
+  background: #fef3c7;
+  color: #f59e0b;
+}
+
+.status-indicator.online {
+  background: #d1fae5;
+  color: #10b981;
+}
+
+.status-indicator.offline {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.status-text {
+  flex: 1;
+  font-size: 28rpx;
+  color: var(--text-primary);
+}
+
+.btn-small {
+  padding: 16rpx 24rpx;
+  font-size: 24rpx;
+  min-height: 64rpx;
+}
+
+/* 调试信息样式 */
+.debug-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+  padding: 24rpx;
+  background: #f8f9fa;
+  border-radius: var(--radius-lg);
+  font-size: 24rpx;
+  color: var(--text-secondary);
+}
+
+.debug-info text {
+  display: block;
+  padding: 8rpx 0;
+}
+
+/* 样式选择网格 */
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200rpx, 1fr));
+  gap: 24rpx;
+  margin-top: 24rpx;
+}
+
+.style-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: 24rpx;
+  text-align: center;
+  border: 2rpx solid var(--border-color);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.style-card:active {
+  transform: scale(0.98);
+}
+
+.style-card.active {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 6rpx rgba(59, 130, 246, 0.1);
+}
+
+.style-preview {
+  width: 100%;
+  height: 160rpx;
+  border-radius: var(--radius-md);
+  margin-bottom: 16rpx;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24rpx;
+  font-weight: 500;
+}
+
+.style-name {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* 表单字段 */
+.form-field {
+  margin-bottom: 32rpx;
+}
+
+.field-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+}
+
+.form-label {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* 按钮组 */
+.button-group {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+  flex-wrap: wrap;
+}
+
+.button-group .btn {
+  flex: 1;
+  min-width: 200rpx;
+}
+
+/* 预览容器 */
+.preview-container {
+  text-align: center;
+  margin-top: 24rpx;
+}
+
+.preview-image {
+  width: 100%;
+  max-width: 600rpx;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 响应式设计 */
+@media (max-width: 750rpx) {
+  .style-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .button-group .btn {
+    width: 100%;
+  }
+}
+
+/* 加载状态优化 */
+.loading {
+  min-height: 400rpx;
+}
+
+/* 错误状态优化 */
+.message {
+  margin-bottom: 32rpx;
+}
+
+/* 表单输入优化 */
+.form-input {
+  transition: var(--transition);
+}
+
+.form-input:focus {
+  transform: scale(1.02);
+}
+
+/* 卡片悬停效果 */
+.content {
+  transition: var(--transition);
+}
+
+.content:active {
+  transform: scale(0.99);
+}

@@ -1,0 +1,193 @@
+[
+  {
+    "style": "blue15",
+    "data": {
+      "上票号": {
+        "value": "",
+        "enabled": true
+      },
+      "事由(二维码上方）": {
+        "value": "",
+        "enabled": true
+      },
+      "出发站": {
+        "value": "",
+        "enabled": true
+      },
+      "到达站": {
+        "value": "",
+        "enabled": true
+      },
+      "发售站": {
+        "value": "",
+        "enabled": true
+      },
+      "姓名": {
+        "value": "",
+        "enabled": true
+      },
+      "席别": {
+        "value": "",
+        "enabled": true
+      },
+      "“加”车": {
+        "value": "",
+        "enabled": true
+      },
+      "车厢号": {
+        "value": "",
+        "enabled": true
+      },
+      "车type": {
+        "value": "",
+        "enabled": true
+      },
+      "席位号": {
+        "value": "",
+        "enabled": true
+      },
+      "普通序号": {
+        "value": "",
+        "enabled": true
+      },
+      "号": {
+        "value": "",
+        "enabled": true
+      },
+      "卧代座序号": {
+        "value": "",
+        "enabled": true
+      },
+      "出发站拼音": {
+        "value": "",
+        "enabled": true
+      },
+      "到达站拼音": {
+        "value": "",
+        "enabled": true
+      },
+      "提示1": {
+        "value": "",
+        "enabled": true
+      },
+      "提示2": {
+        "value": "",
+        "enabled": true
+      },
+      "年": {
+        "value": "",
+        "enabled": true
+      },
+      "月": {
+        "value": "",
+        "enabled": true
+      },
+      "日": {
+        "value": "",
+        "enabled": true
+      },
+      "时": {
+        "value": "",
+        "enabled": true
+      },
+      "分": {
+        "value": "",
+        "enabled": true
+      },
+      "检票口": {
+        "value": "",
+        "enabled": true
+      },
+      "注释1": {
+        "value": "",
+        "enabled": true
+      },
+      "注释2": {
+        "value": "",
+        "enabled": true
+      },
+      "票价1": {
+        "value": "",
+        "enabled": true
+      },
+      "票价2": {
+        "value": "",
+        "enabled": true
+      },
+      "下票号（字母之前）": {
+        "value": "",
+        "enabled": true
+      },
+      "上票号字母": {
+        "value": "",
+        "enabled": true
+      },
+      "上票号数字": {
+        "value": "",
+        "enabled": true
+      },
+      "证件类型": {
+        "value": "",
+        "enabled": true
+      },
+      "其它证件标识符（证件号处）": {
+        "value": "",
+        "enabled": true
+      },
+      "身份证号1": {
+        "value": "",
+        "enabled": true
+      },
+      "星号": {
+        "value": "",
+        "enabled": true
+      },
+      "身份证号2": {
+        "value": "",
+        "enabled": true
+      },
+      "车次类型": {
+        "value": "",
+        "enabled": true
+      },
+      "车次号": {
+        "value": "",
+        "enabled": true
+      },
+      "票种": {
+        "value": "",
+        "enabled": true
+      },
+      "加快等级": {
+        "value": "",
+        "enabled": true
+      },
+      "经由type": {
+        "value": "",
+        "enabled": true
+      },
+      "经由": {
+        "value": "",
+        "enabled": true
+      },
+      "至type": {
+        "value": "",
+        "enabled": true
+      },
+      "终到站": {
+        "value": "",
+        "enabled": true
+      },
+      "站type": {
+        "value": "",
+        "enabled": true
+      },
+      "有效期": {
+        "value": "",
+        "enabled": true
+      }
+    },
+    "timestamp": "2025-11-06T17:01:26.091Z",
+    "id": "1762448486092_s41ijjx0l"
+  }
+]

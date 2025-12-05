@@ -1,0 +1,58 @@
+/* styles/variables.wxss */
+/* 样式变量定义 */
+
+:root {
+  /* 颜色变量 */
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary-color: #8b5cf6;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  
+  /* 文本颜色 */
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  
+  /* 背景颜色 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  
+  /* 边框颜色 */
+  --border-color: #e2e8f0;
+  --border-hover: #cbd5e1;
+  
+  /* 阴影 */
+  --shadow-sm: 0 2rpx 4rpx rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8rpx 16rpx rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20rpx 32rpx rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 40rpx 50rpx rgba(0, 0, 0, 0.1);
+  
+  /* 圆角 */
+  --radius-sm: 12rpx;
+  --radius-md: 16rpx;
+  --radius-lg: 24rpx;
+  --radius-xl: 32rpx;
+  
+  /* 间距 */
+  --spacing-xs: 8rpx;
+  --spacing-sm: 16rpx;
+  --spacing-md: 24rpx;
+  --spacing-lg: 32rpx;
+  --spacing-xl: 48rpx;
+  --spacing-2xl: 64rpx;
+  
+  /* 字体大小 */
+  --font-xs: 20rpx;
+  --font-sm: 24rpx;
+  --font-md: 28rpx;
+  --font-lg: 32rpx;
+  --font-xl: 36rpx;
+  --font-2xl: 40rpx;
+  --font-3xl: 48rpx;
+  
+  /* 过渡动画 */
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}

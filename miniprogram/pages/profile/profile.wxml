@@ -1,0 +1,161 @@
+<!--pages/profile/profile.wxml-->
+<!--用户中心页面 - 用户信息和小程序信息-->
+
+<view class="container">
+  <!-- 用户信息卡片 -->
+  <view class="user-card">
+    <view class="user-avatar">
+      <image 
+        class="avatar-image" 
+        src="{{userInfo.avatarUrl}}" 
+        mode="aspectFill"
+      />
+    </view>
+    
+    <view class="user-info">
+      <text class="user-name">{{userInfo.nickName}}</text>
+      <text class="user-desc">车票制作爱好者</text>
+    </view>
+    
+    <button
+      wx:if="{{!hasUserInfo}}"
+      class="btn btn-sm btn-primary"
+      open-type="getUserInfo"
+      bindgetuserinfo="getUserProfile"
+    >
+      <text>登录</text>
+    </button>
+  </view>
+
+  <!-- 统计数据 -->
+  <view class="content">
+    <view class="title">
+      <text class="title-icon">📊</text>
+      <text>我的统计</text>
+    </view>
+    
+    <view class="stats-grid">
+      <view class="stat-item">
+        <text class="stat-number">{{stats.totalGenerated}}</text>
+        <text class="stat-label">制作总数</text>
+      </view>
+      
+      <view class="stat-item">
+        <text class="stat-number">{{stats.favoriteStyle}}</text>
+        <text class="stat-label">常用样式</text>
+      </view>
+      
+      <view class="stat-item">
+        <text class="stat-number">{{stats.joinDate}}</text>
+        <text class="stat-label">加入日期</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 设置选项 -->
+  <view class="content">
+    <view class="title">
+      <text class="title-icon">⚙️</text>
+      <text>设置选项</text>
+    </view>
+    
+    <view class="settings-list">
+      <view 
+        wx:for="{{settings}}" 
+        wx:key="key"
+        class="setting-item"
+      >
+        <view class="setting-info">
+          <text class="setting-title">{{item.title}}</text>
+          <text class="setting-desc">{{item.desc}}</text>
+        </view>
+        
+        <switch 
+          wx:if="{{item.type === 'switch'}}"
+          checked="{{item.value}}"
+          data-key="{{item.key}}"
+          data-value="{{!item.value}}"
+          bindchange="onSettingChange"
+        />
+      </view>
+    </view>
+  </view>
+
+  <!-- 账号管理 -->
+  <view class="content" wx:if="{{hasUserInfo}}">
+    <view class="title">
+      <text class="title-icon">👤</text>
+      <text>账号管理</text>
+    </view>
+
+    <view class="action-list">
+      <view class="action-item danger" bindtap="logout">
+        <text class="action-icon">🚪</text>
+        <text class="action-title">登出账号</text>
+        <text class="action-arrow">></text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 应用管理 -->
+  <view class="content">
+    <view class="title">
+      <text class="title-icon">🔧</text>
+      <text>应用管理</text>
+    </view>
+
+    <view class="action-list">
+      <view class="action-item" bindtap="checkUpdate">
+        <text class="action-icon">🔄</text>
+        <text class="action-title">检查更新</text>
+        <text class="action-arrow">></text>
+      </view>
+
+      <view class="action-item" bindtap="clearCache">
+        <text class="action-icon">🗑️</text>
+        <text class="action-title">清除缓存</text>
+        <text class="action-arrow">></text>
+      </view>
+      
+      <view class="action-item" bindtap="feedback">
+        <text class="action-icon">💬</text>
+        <text class="action-title">意见反馈</text>
+        <text class="action-arrow">></text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 关于信息 -->
+  <view class="content">
+    <view class="title">
+      <text class="title-icon">ℹ️</text>
+      <text>关于信息</text>
+    </view>
+    
+    <view class="about-list">
+      <view class="about-item" bindtap="about">
+        <text class="about-icon">📱</text>
+        <text class="about-title">关于我们</text>
+        <text class="about-arrow">></text>
+      </view>
+      
+      <view class="about-item" bindtap="privacy">
+        <text class="about-icon">🔒</text>
+        <text class="about-title">隐私政策</text>
+        <text class="about-arrow">></text>
+      </view>
+      
+      <view class="about-item" bindtap="terms">
+        <text class="about-icon">📋</text>
+        <text class="about-title">使用条款</text>
+        <text class="about-arrow">></text>
+      </view>
+    </view>
+    
+    <view class="app-info">
+      <text class="app-name">{{appInfo.name}}</text>
+      <text class="app-version">版本 {{appInfo.version}}</text>
+      <text class="app-developer">开发者：{{appInfo.developer}}</text>
+    </view>
+  </view>
+</view>

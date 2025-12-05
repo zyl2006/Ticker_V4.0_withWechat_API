@@ -1,0 +1,198 @@
+<!--pages/index/index.wxml-->
+<!--首页 - 车票制作-->
+
+<view class="container">
+  <!-- 加载状态 -->
+  <view wx:if="{{loading}}" class="loading">
+    <view class="loading-icon"></view>
+    <text>加载中...</text>
+  </view>
+
+  <!-- 错误状态 -->
+  <view wx:elif="{{error}}" class="content">
+    <view class="message message-error">
+      <text class="message-icon">⚠️</text>
+      <text>{{error}}</text>
+    </view>
+    <button class="btn btn-primary" bindtap="retry">重试</button>
+  </view>
+
+  <!-- 主要内容 -->
+  <view wx:else>
+    <!-- 标题 -->
+    <view class="content">
+      <view class="title">
+        <text class="title-icon">🎨</text>
+        <text>Ticker-车票儿</text>
+      </view>
+      <view class="subtitle">精细化纪念车票智能生成工具</view>
+    </view>
+
+    <!-- 服务器状态 -->
+    <view class="content">
+      <view class="server-status">
+        <view class="status-indicator {{serverStatus}}">
+          <text wx:if="{{serverStatus === 'checking'}}">🔄</text>
+          <text wx:elif="{{serverStatus === 'online'}}">🟢</text>
+          <text wx:elif="{{serverStatus === 'offline'}}">🔴</text>
+        </view>
+        <view class="status-text">
+          <text wx:if="{{serverStatus === 'checking'}}">检测服务器状态中...</text>
+          <text wx:elif="{{serverStatus === 'online'}}">服务器在线</text>
+          <text wx:elif="{{serverStatus === 'offline'}}">服务器离线</text>
+        </view>
+        <button 
+          wx:if="{{serverStatus === 'offline'}}" 
+          class="btn btn-ghost btn-small" 
+          bindtap="retryServerCheck"
+        >
+          重新检测
+        </button>
+      </view>
+    </view>
+
+    <!-- 样式选择 -->
+    <view class="content">
+      <view class="title">
+        <text class="title-icon">🎨</text>
+        <text>选择车票样式</text>
+      </view>
+      
+      <view class="style-grid">
+        <view 
+          wx:for="{{styles}}" 
+          wx:key="*this"
+          class="style-card {{currentStyle === item ? 'active' : ''}}"
+          data-style="{{item}}"
+          bindtap="onStyleSelect"
+        >
+          <view class="style-preview">{{item}}</view>
+          <text class="style-name">{{item}}</text>
+        </view>
+      </view>
+    </view>
+
+           <!-- 表单填写 -->
+           <view class="content">
+             <view class="title">
+               <text class="title-icon">📝</text>
+               <text>填写车票信息</text>
+             </view>
+             
+             <view class="subtitle">当前样式：{{currentStyle}}</view>
+             <view class="subtitle">字段数量：{{formFields.length}}</view>
+             
+             <view class="form-group" wx:for="{{formFields}}" wx:key="key">
+               <view class="form-field">
+                 <view class="field-header">
+                   <text class="form-label">{{item.label}}</text>
+                   <switch 
+                     checked="{{formData[item.key].enabled}}"
+                     data-field="{{item.key}}"
+                     bindchange="onFieldToggle"
+                     size="small"
+                   />
+                 </view>
+                 
+                 <input 
+                   class="form-input {{!formData[item.key].enabled ? 'disabled' : ''}}"
+                   type="text"
+                   placeholder="{{item.description || '请输入' + item.label}}"
+                   value="{{formData[item.key].value}}"
+                   data-field="{{item.key}}"
+                   bindinput="onFormInput"
+                   disabled="{{!formData[item.key].enabled}}"
+                 />
+               </view>
+             </view>
+           </view>
+
+    <!-- 操作按钮 -->
+    <view class="content">
+      <view class="button-group">
+        <button 
+          class="btn btn-primary" 
+          bindtap="generatePreview"
+          disabled="{{previewLoading || serverStatus !== 'online'}}"
+        >
+          <text wx:if="{{previewLoading}}">生成中...</text>
+          <text wx:elif="{{serverStatus !== 'online'}}">服务器离线</text>
+          <text wx:else>✨ 生成预览</text>
+        </button>
+        
+        <button 
+          class="btn btn-secondary" 
+          bindtap="viewPreview"
+          disabled="{{!previewImage}}"
+        >
+          <text>👁️ 查看预览</text>
+        </button>
+        
+        <button 
+          class="btn btn-secondary" 
+          bindtap="saveToAlbum"
+          disabled="{{!previewImage}}"
+        >
+          <text>💾 保存到相册</text>
+        </button>
+      </view>
+      
+      <view class="button-group">
+        <button 
+          class="btn btn-ghost" 
+          bindtap="saveDraft"
+        >
+          <text>💾 保存草稿</text>
+        </button>
+        
+        <button 
+          class="btn btn-ghost" 
+          bindtap="clearDraft"
+          wx:if="{{hasDraft}}"
+        >
+          <text>🗑️ 清除草稿</text>
+        </button>
+        
+        <button 
+          class="btn btn-ghost" 
+          bindtap="resetForm"
+        >
+          <text>↺ 重置表单</text>
+        </button>
+      </view>
+    </view>
+
+    <!-- 预览区域 -->
+    <view class="content" wx:if="{{previewImage}}">
+      <view class="title">
+        <text class="title-icon">🖼️</text>
+        <text>预览效果</text>
+      </view>
+      
+      <view class="preview-container">
+        <image 
+          class="preview-image" 
+          src="data:image/png;base64,{{previewImage}}" 
+          mode="widthFix"
+          bindtap="viewPreview"
+        />
+      </view>
+    </view>
+
+           <!-- 调试信息 -->
+           <view class="content">
+             <view class="title">
+               <text class="title-icon">🔧</text>
+               <text>调试信息</text>
+             </view>
+             <view class="debug-info">
+               <text>服务器状态: {{serverStatus}}</text>
+               <text>样式数量: {{styles.length}}</text>
+               <text>当前样式: {{currentStyle}}</text>
+               <text>表单字段: {{formFields.length}}</text>
+               <text>API地址: http://api.sgsky.tech</text>
+               <text wx:if="{{formFields.length > 0}}">字段列表: {{fieldNames}}</text>
+             </view>
+           </view>
+  </view>
+</view>

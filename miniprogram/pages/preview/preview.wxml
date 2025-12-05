@@ -1,0 +1,30 @@
+<!--pages/preview/preview.wxml-->
+<!--预览页面 - 查看车票预览-->
+
+<view class="container">
+  <view class="preview-content">
+    <view wx:if="{{previewImage}}" class="preview-container">
+      <image 
+        class="preview-image" 
+        src="{{previewImage}}" 
+        mode="widthFix"
+        bindtap="saveToAlbum"
+      />
+    </view>
+    
+    <view wx:else class="empty-state">
+      <text class="empty-icon">🖼️</text>
+      <text class="empty-text">暂无预览图片</text>
+    </view>
+    
+    <view class="action-buttons">
+      <button class="btn btn-primary" bindtap="saveToAlbum" disabled="{{!previewImage}}">
+        <text>💾 保存到相册</text>
+      </button>
+      
+      <button class="btn btn-secondary" bindtap="goBack">
+        <text>← 返回</text>
+      </button>
+    </view>
+  </view>
+</view>
